@@ -39,7 +39,7 @@ if __name__ == '__main__':
             printHelp()
             sys.exit(2)
         elif opt == '-f':
-            file = open(args['f'])
+            file = open(arg)
         elif opt == '-w':
             size = int(arg)
 
