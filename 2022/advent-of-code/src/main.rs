@@ -3,6 +3,7 @@ use clap::Parser;
 mod input_utils;
 
 mod d1;
+mod d2;
 
 #[derive(Parser,Default,Debug)]
 #[clap(author="gmarcotte", version, about="Solutions to Advent of Code 2022")]
@@ -20,6 +21,7 @@ fn main() {
     if let Ok(lines) = input_utils::read_lines(args.input) {
         match args.day {
             1 => d1::main(lines, 3),
+            2 => d2::main(lines),
             _ => println!("Day {} is not implemented", args.day),
         }
     } else {
