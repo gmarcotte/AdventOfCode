@@ -4,6 +4,7 @@ mod input_utils;
 
 mod d1;
 mod d2;
+mod d3;
 
 #[derive(Parser,Default,Debug)]
 #[clap(author="gmarcotte", version, about="Solutions to Advent of Code 2022")]
@@ -22,6 +23,7 @@ fn main() {
         match args.day {
             1 => d1::main(lines, 3),
             2 => d2::main(lines),
+            3 => d3::main(lines),
             _ => println!("Day {} is not implemented", args.day),
         }
     } else {
